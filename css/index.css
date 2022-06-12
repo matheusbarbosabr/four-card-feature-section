@@ -1,0 +1,145 @@
+:root {
+    /* Colors */
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-very-dark-blue: hsl(234, 12%, 34%);
+    --clr-grayish-blue: hsl(229, 6%, 66%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+
+    /* Font */
+    --default-font-size: 0.9375rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--default-font-size);
+    background-color: var(--clr-very-light-gray);
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 375px;
+    padding: 0 1.25em 1.25em 1.25em;
+}
+
+.intro {
+    text-align: center;
+    padding: 3em 0 1.5em 0;
+}
+
+.intro__title {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--clr-very-dark-blue);
+    line-height: 1.5;
+}
+
+.intro__subtitle {
+    font-size: 1.5rem;
+    color: var(--clr-very-dark-blue);
+    padding-bottom: 0.75em;
+}
+
+.intro__text {
+    font-size: inherit;
+    color: var(--clr-grayish-blue);
+    line-height: 1.6;
+}
+
+.card {
+    padding: 2em 1.5em;
+    margin-top: 1.5em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(96, 106, 255, 0.1) 0px 4px 12px;
+}
+
+.card:nth-child(1) {
+    border-top: 5px solid var(--clr-cyan);
+}
+
+.card:nth-child(3) {
+    border-top: 5px solid var(--clr-blue);
+}
+
+.double-cards .card:nth-child(1) {
+    border-top: 5px solid var(--clr-red);
+}
+
+.double-cards .card:nth-child(2) {
+    border-top: 5px solid var(--clr-orange);
+}
+
+.card__title {
+    font-size: 1.3rem;
+    color: var(--clr-very-dark-blue);
+    padding-bottom: 0.5em;
+}
+
+.card__text {
+    font-size: var(--default-font-size);
+    line-height: 1.6;
+    color: var(--clr-grayish-blue);
+}
+
+.card__container {
+    padding-top: 2.5em;
+}
+
+.card__container-image {
+    display: block;
+    margin-left: auto;
+}
+
+@media (min-width: 1000px) {
+    body {
+        display: grid;
+        place-items: center;
+    }
+
+    .main {
+        max-width: 1200px;
+    }
+
+    .intro {
+        padding: 0 0 1.5em 0;
+    }
+
+    .intro__title {
+        font-size: 2.4rem;
+    }
+
+    .intro__subtitle {
+        font-size: 2.4rem;
+        padding-bottom: 0.5em;
+    }
+
+    .intro__text {
+        font-size: 1rem;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .container > * {
+        flex-basis: 100%;
+        max-width: 340px;
+    }
+}
